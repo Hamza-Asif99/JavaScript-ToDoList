@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>JavaScript Based To Do List</title>
+</head>
+<body>
+    <div class="modal-bg" style="display: grid; justify-content: center;">
+        <div class="modal-input">
+            <form id="frm1" action="post">
+
+                <h2>Add Your Quest</h2>
+                <input type="text" style="padding: 10px; "name="quest" id="quest" cols="30" rows="10" ></input>
+                <button type="submit" onclick="addQuest()" id="modal-close" style="background-color:teal;border:none;padding:10px">Add</button>
+                
+            </form>
+            
+        </div>
+    </div>
+    <div class="todo">
+        
+        <div class="pending-table boxstyle">
+            
+            <h2>Pending Quests</h2>
+            <table id="todoTable" class="pendingTable">
+                <tr>
+                    <b><td>#</td></b>
+                    <td id="quest"><b>Quest</b></td>
+                    
+                    <td><b>Delete</b></td>
+                    <td><b>Completed</b></td>
+                </tr>
+                <!-- <tr>
+                    <b><td>1</td></b>
+                    <td id="quest"><b>Questassdasd</b></td>
+                    
+                    <td><button class="deleteButton">Delete</button></td>
+                    <td><button class="completeButton">Completed</button></td>
+                </tr> -->
+               
+            </table>
+            <!-- <button  id="addQuest">Add Quest</button> -->
+        </div>
+        
+        <div class="completedTable boxstyle">
+            <h2>Completed Quests</h2>
+            <table id="todoTable" class="completeTable">
+                <tr>
+                    <b><td>#</td></b>
+                    <td id="quest"><b>Quests Completed</b></td>
+                    
+                    
+                </tr>
+            </table>
+            <button type="button" id="clearButton" onclick="clearTable()">Clear</button>
+        </div>
+    </div>
+    
+
+    
+    <script>
+        var form = document.getElementById("frm1");        //Prevents the submit button from refresshing the page
+        function handleForm(event) { event.preventDefault(); } 
+        form.addEventListener('submit', handleForm)
+        
+    </script>
+</body>
+</html>

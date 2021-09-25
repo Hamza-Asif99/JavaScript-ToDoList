@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: larger;
+    box-sizing: border-box;
+    margin: 15px;
+    background-image: url(/double-bubble-dark.png);
+    color: white;
+    /* background-size: cover; */
+  
+    
+}
+.pending-table{
+    /* border: 2px solid white; */
+    position: relative;
+}
+#addQuest{
+    background-color: teal;
+    border:none;
+    padding: 10px;
+    border-radius: 10%;
+    position: absolute;
+    
+    right: 0;
+
+}
+#addQuest:hover{
+    background-color: tomato;
+    padding:10px 20px;
+
+}
+.pending-table,td{
+    padding-right: 10px;
+
+}
+#quest{
+    font-size: x-large;
+    padding-right: 10rem;
+}
+.todo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    justify-items: center;
+    grid-template-rows: auto;
+
+}
+.completedTable{
+    position: relative;
+}
+#clearButton{
+    padding:10px;
+    position:absolute;
+    right: 0;
+    top: 1;
+}
+#clearButton:hover{
+    background-color: teal;
+    border: none;
+}
